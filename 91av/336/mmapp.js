@@ -1,1 +1,0 @@
-var downList={"maomiapk":{"site":2,"name":"maomiapk","url":"https:\/\/downloadapk.1vkx.cn\/maomi_2.apk"}}
