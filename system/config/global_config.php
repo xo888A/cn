@@ -4,9 +4,9 @@
 	################################################
 	if(!defined('CW')){exit('Access Denied');}
     $_config = array(
-        'dbhost'=>'127.0.0.1',
-        'dbuser'=>'app_cn',#用户
-        'dbpw'=>'zzDcaWre6ewfTEs4',#密码
-        'dbname'=>'app_cn',#项目中当前数据库
+        'dbhost'=>'49.0.229.13',
+        'dbuser'=>'root',#用户
+        'dbpw'=>'wStsfDe4tACZYPE5',#密码
+        'dbname'=>'cn',#项目中当前数据库
     );
 ?>
