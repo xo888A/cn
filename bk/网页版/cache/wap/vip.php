@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>充值会员</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+    <script type="text/javascript" src="../script/jquery.js"></script>
+    <script type="text/javascript" src="../script/api.js"></script>
+    <script type="text/javascript" src="../script/swiper.js"></script>
+    <script type="text/javascript" src="<?php echo JS ?>/index.js"></script>
+    <style>
+        .morder{
+            border-top:1px solid #f1eeee;
+            bottom:0;left:0;width:100%;background: #fff;position: fixed;
+        }
+        .morder div{
+            padding:10px
+        }
+        .gopay{
+            top:15px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <?php file::import("system-model-top"); ?>
+    <div class="wrap flr mt70">
+        <div class="top rel ntop ">
+            <img class="abs" src="<?php echo TU ?>/vipbg.png">
+            <p class="l1 abs"><img src="<?php echo $this->vars["avatar"] ?>"></p>
+            <div class="l2 abs">
+                <p class="tel"><?php echo $this->vars["tel"] ?><?php echo $this->vars["level"] ?></p>
+                <p class="endtime"><?php echo $this->vars["viptime"] ?></p>
+            </div>
+            <div class="l3 abs onclick">
+                <p class="selected" rel="1">自助升级VIP</p>
+                <p rel="2">卡密兑换VIP</p>
+                <p rel="3">常见问题</p>
+            </div>
+       </div>
+    </div>
+    <div class="wrap">
+        <div class="npart1 ">
+            <p class="btit">请选择VIP套餐<span class="fr"><a style="color:#FF7AA5" href="<?php echo INDEX ?>/index.php?mod=customer">需要人工客服帮助</a></span></p>
+            <ul class="width3 overflow vippay">
+                <?php echo $this->vars["vip"] ?>
+            </ul>
+            <div class="not">
+                <div class="w">
+                    <p><span>购买必读:</span><?php echo $this->vars["miaoshu1"] ?></p>
+                </div>
+            </div>
+            
+            
+            <img  src="<?php echo TU ?>/btit.jpg" style="margin: 20px 0;width: 100%;">
+            <ul class="func overflow  w100">
+                <li>
+                    <div>
+                        <img src="<?php echo TU ?>/f1.png">
+                        <p>全网视频在线播放</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="<?php echo TU ?>/f2.png">
+                        <p>解锁全部电子写真</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="<?php echo TU ?>/f3.png">
+                        <p>每月300+作品更新</p>
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="<?php echo TU ?>/f4.png">
+                        <p>手机电脑APP通用</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="<?php echo TU ?>/f5.png">
+                        <p>1080P超清视频画质</p>
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="<?php echo TU ?>/f6.png">
+                        <p>无损原片作品下载</p>
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="<?php echo TU ?>/f7.png">
+                        <p>100+原创模特签约</p>
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="<?php echo TU ?>/f8.png">
+                        <p>专属域名永不迷路</p>
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="<?php echo TU ?>/f9.png">
+                        <p>账单保密无色情字眼</p>
+                    </div>
+                </li><li>
+                    <div>
+                        <img src="<?php echo TU ?>/f10.png">
+                        <p>专属在线客服答疑</p>
+                    </div>
+                </li>
+            </ul><div class="bottom"></div>
+        </div>
+    </div>
+    <div class="part4 npart2 part overflow iuy wrap hide">
+        <p class="notice" style="font-size:18px;margin-top:20px">使用卡密兑换VIP</p>
+        <p class="button button2 s"><input class="covertcard w89" placeholder="请输入卡密" class='w89'></p>
+        <p class="pubbtn covertcardbtn" style="margin:20px 0 10px">确认兑换</p>
+        <p class="notice a">1.每张卡密仅限使用一次</p>
+        <p class="notice a">2.复制你购买的卡密粘贴到上面输入框即可兑换</p>
+        <p class="notice a">3.需要帮助请联系人工客服帮助</p>
+    </div>
+    <div class="npart3 overflow addpt3 hide wrap hide">
+        <p class="notice y" style="font-size:18px;margin-top:20px">常见问题/答疑帮助</p>
+        <ul class="overflow answer">
+             <?php echo $this->vars["answer"] ?>
+        </ul>
+    </div>
+    <div class="morder rel">
+            <div>
+                <p class="p1">订单金额:<span class="s1">¥<strong>0</strong>元</span></p>
+            <p class="p2"><span class="s2">已选择: <strong>暂未选择</strong></span></p>
+            <a href="javascript:;" id="" class="fr gopay">立即支付</a></p>
+            </div>
+        </div>
+    <script>
+        $(function(){
+            $('.vippay li').click(function(){
+                var s1 = $(this).find('.s1').text();
+                var id = $(this).find("input[name=id]").val();
+                $('.vippay li img.vipselect').remove();
+                var ele = $(this).find('.vipselect').attr('class');
+                if(ele==undefined || !ele){
+                    $(this).append("<img class='abs vipselect' src='../image/s_.png'>");
+                }
+                var yhq = parseInt($(this).find('.yhq').text());
+                if(yhq){
+                    s1 = parseInt(s1)-yhq;
+                }
+                $('.morder span.s1 strong').text(s1);
+                $('.morder span.s2 strong').text($(this).find('.y1').text());
+                $('.gopay').attr('id',id)
+            });
+            $('.gopay').click(function(){
+                var id = $(this).attr('id');
+                ajax('gopay',"id="+id+"&type=vip");
+            });
+        });
+        $('.onclick p').click(function(){
+                $('.onclick p').attr('class','');
+                var rel = $(this).attr("rel");
+                $(this).attr('class','selected');
+                if(rel=="1"){
+                    $('.npart1').show();
+                    $('.npart2').hide();
+                    $('.npart3').hide();
+                }else if(rel=='2'){
+                    $('.npart1').hide();
+                    $('.npart2').show();
+                    $('.npart3').hide();
+                }else if(rel=='3'){
+                    $('.npart1').hide();
+                    $('.npart2').hide();
+                    $('.npart3').show();
+                }
+            });
+            $('.tx li').click(function(){
+                $('.tx li').attr('class','');
+                $(this).attr('class','selected');
+            });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>会员设置</title>
+    <link rel="stylesheet" href="{G:CSS}/backstage.css" />
+    <link rel="stylesheet" href="{G:CSS}/font-awesome.min.css" />
+    <script src="{G:JS}/jquery-1.8.3.min.js"></script>
+    <script src="{G:JS}/backstage.js"></script>
+    <style>
+        .frmtable_content td.r input{
+            margin-bottom:5px;width:10%
+        }
+    </style>
+</head>
+<body>
+    {template:model:admin:header}
+    {template:model:admin:aside}
+    <div class="wrap">
+        <div class="w100">
+            {template:model:admin:tag}
+            <div class="content">
+        		<div class="frame">
+                    
+                	<p class="title">各种级别的会员每天观看视频/社区数量(短视频不受限制)</p>
+                    <div class="frmtable_content">
+                		<table class="w100">
+                			<tbody>
+                			<tr>
+                				<td>LV1会员每日看片次数</td>
+                				<td><input value="{lv1}" name="lv1" placeholder=""></td>
+                			</tr>
+                			<tr>
+                				<td>LV2会员每日看片次数</td>
+                				<td><input value="{lv2}" name="lv2" placeholder=""></td>
+                			</tr><tr>
+                				<td>LV3会员每日看片次数</td>
+                				<td><input value="{lv3}" name="lv3" placeholder=""></td>
+                			</tr>
+                			<tr>
+                				<td>LV4会员每日看片次数</td>
+                				<td><input value="{lv4}" name="lv4" placeholder=""></td>
+                			</tr>
+                			<tr>
+                				<td>LV5会员每日看片次数</td>
+                				<td><input value="{lv5}" name="lv5" placeholder=""></td>
+                			</tr>
+                			<tr>
+                				<td>LV6会员每日看片次数</td>
+                				<td><input value="{lv6}" name="lv6" placeholder=""></td>
+                			</tr>
+                				<td><a href="javascript:;" class="btn submit" rel="updatevipset"><i class="fa fa-edit"></i>保存</a></td>
+                		</tbody></table>
+                	</div>
+                	
+                	
+                	<!--<p class="title">各种级别会员设计每天下载数量</p>-->
+                 <!--   <div class="frmtable_content">-->
+                	<!--	<table class="w100">-->
+                	<!--		<tbody>-->
+                			<!--<tr>-->
+                			<!--	<td>LV1会员每日下载次数</td>-->
+                			<!--	<td><input value="{downlv1}" name="downlv1" placeholder=""></td>-->
+                			<!--</tr>-->
+                			<!--<tr>-->
+                			<!--	<td>LV2会员每日下载次数</td>-->
+                			<!--	<td><input value="{downlv2}" name="downlv2" placeholder=""></td>-->
+                			<!--</tr><tr>-->
+                			<!--	<td>LV3会员每日下载次数</td>-->
+                			<!--	<td><input value="{downlv3}" name="downlv3" placeholder=""></td>-->
+                			<!--</tr>-->
+                			<!--<tr>-->
+                			<!--	<td>LV4会员每日下载次数</td>-->
+                			<!--	<td><input value="{downlv4}" name="downlv4" placeholder=""></td>-->
+                			<!--</tr>-->
+                			<!--<tr>-->
+                			<!--	<td>LV5会员每日下载次数</td>-->
+                			<!--	<td><input value="{downlv5}" name="downlv5" placeholder=""></td>-->
+                			<!--</tr>-->
+                			<!--<tr>-->
+                			<!--	<td>LV6会员每日下载次数</td>-->
+                			<!--	<td><input value="{downlv6}" name="downlv6" placeholder=""></td>-->
+                			<!--</tr>-->
+                			
+                	<!--		<tr>-->
+                	<!--			<td></td>-->
+                			
+                	<!--		</tr>-->
+                	<!--	</tbody></table>-->
+                	<!--</div>-->
+                	
+                	
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

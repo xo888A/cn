@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>充值会员</title>
+    <link rel="stylesheet" href="{G:CSS}/style.css" />
+    <script src="{G:JS}/jquery-1.8.3.min.js"></script>
+    <script src="{G:JS}/index.js"></script>
+    <style>
+        .wrap2 .fl ul li{
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    {template:model:header}
+    <div class="wrap2 overflow">
+        <div class="fl w100">
+            <div class="fl fls">
+                <p class="u"><img src="{avatar}" /></p>
+                <p class="qiandao">签到赢金币</p>
+                <ul class="fun">
+                    <li><a href="{G:INDEX}/index.php?mod=user"><img src="{G:TU}/u1.png" />会员中心</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=edit"><img src="{G:TU}/u7.png" />作品管理</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=set"><img src="{G:TU}/u2.png" />账号设置</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=wallet"><img src="{G:TU}/u3.png" />我的钱包</a></li>
+                    <li  class="selected"><a href="{G:INDEX}/index.php?mod=vip"><img src="{G:TU}/u4_.png" />充值会员</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=money"><img src="{G:TU}/u5.png" />充值金币</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=card"><img src="{G:TU}/u6.png" />卡密兑换</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=concern"><img src="{G:TU}/u7.png" />我的关注</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=albuy"><img src="{G:TU}/u8.png" />已购影片</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=customer"><img src="{G:TU}/u9.png" />客服中心</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=message"><img src="{G:TU}/u10.png" />消息中心</a></li>
+                    <li><a href="{G:INDEX}/index.php?mod=shares"><img src="{G:TU}/u11.png" />推广赚钱</a></li>
+                    <li class="logout"><a href="{G:INDEX}/index.php?mod=logout "><img src="{G:TU}/u12.png" />退出账号</a></li>
+                </ul>
+            </div>
+            <script>
+                    $(function(){
+                        $('.onclick p').click(function(){
+                            $('.onclick p').attr('class','');
+                            var rel = $(this).attr("rel");
+                            $(this).attr('class','selected');
+                            if(rel=="1"){
+                                $('.npart1').show();
+                                $('.npart2').hide();
+                                $('.npart3').hide();
+                            }else if(rel=='2'){
+                                $('.npart1').hide();
+                                $('.npart2').show();
+                                $('.npart3').hide();
+                            }else if(rel=='3'){
+                                $('.npart1').hide();
+                                $('.npart2').hide();
+                                $('.npart3').show();
+                            }
+                        });
+                        $('.tx li').click(function(){
+                            $('.tx li').attr('class','');
+                            $(this).attr('class','selected');
+                        });
+                    });
+                </script>
+            <div class="fl flr">
+               <div class="top rel ntop">
+                    <img class="abs" src="{G:TU}/vipbg.png">
+                    <p class="l1 abs"><img src="{avatar}" /></p>
+                    <div class="l2 abs">
+                        <p class="tel">{tel}{level}</p>
+                        <p class="endtime">{viptime}</p>
+                    </div>
+                    <div class="l3 abs onclick">
+                        <p class="selected" rel="1">自助升级VIP</p>
+                        <p rel="2">卡密兑换VIP</p>
+                        <p rel="3">常见问题</p>
+                    </div>
+               </div> 
+               <!--part1-->
+               <div class="npart1 ">
+                   <p class="btit">请选择VIP套餐<span class="fr"><a style="color:#FF7AA5" href="{G:INDEX}/index.php?mod=customer">需要人工客服帮助</a></span></p>
+                   <ul class="width3 overflow vippay">
+                       {vip}
+                   </ul>
+                   <div class="not">
+                       <div class="w">
+                           <p><span>购买必读:</span>{miaoshu1}</p>
+                       </div>
+                   </div>
+                    <p class="morder">订单金额:<span class="s1">¥<strong>0</strong>元</span><span class="s2">已选择: <strong>暂未选择</strong></span><a href="javascript:;" class="gopay fr" id="">确认下一步</a></p>
+                   <img src="{G:TU}/btitpc.jpg" style="margin-top: 30px;" />
+                   <ul class="func overflow width2 w100">
+                       <li>
+                           <div>
+                               <img src="{G:TU}/f1.png" />
+                               <p>全网福利视频无限在线播放</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div>
+                               <img src="{G:TU}/f2.png" />
+                               <p>全网电子写真图片无限浏览</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div>
+                               <img src="{G:TU}/f3.png" />
+                               <p>每月300套以上原创作品更新</p>
+                           </div>
+                       </li><li>
+                           <div>
+                               <img src="{G:TU}/f4.png" />
+                               <p>PC电脑手机网页/APP三端通用</p>
+                           </div>
+                       </li>
+                       <li>
+                           <div>
+                               <img src="{G:TU}/f5.png" />
+                               <p>1080PHD超清视频无损蓝光画质</p>
+                           </div>
+                       </li><li>
+                           <div>
+                               <img src="{G:TU}/f6.png" />
+                               <p>原版无损视频/套图在线下载</p>
+                           </div>
+                       </li><li>
+                           <div>
+                               <img src="{G:TU}/f7.png" />
+                               <p>签约百位原创模特持续更新</p>
+                           </div>
+                       </li><li>
+                           <div>
+                               <img src="{G:TU}/f8.png" />
+                               <p>享受专属VIP域名永不迷路</p>
+                           </div>
+                       </li><li>
+                           <div>
+                               <img src="{G:TU}/f9.png" />
+                               <p>购买记录保密账单无色情字眼</p>
+                           </div>
+                       </li><li>
+                           <div>
+                               <img src="{G:TU}/f10.png" />
+                               <p>专属VIP在线客服24小时答疑</p>
+                           </div>
+                       </li>
+                   </ul>
+               </div>
+               <!--part2-->
+               <div class="part4 npart2 part overflow iuy hide">
+                    <p class="notice" style="font-size:24px;margin-top:20px">使用卡密兑换VIP</p>
+                    <p class="button button2 s"><input class='covertcard' placeholder="请输入卡密" style="width: 49.8%;" /></p>
+                    <p class="pubbtn covertcardbtn" style="margin:20px 0 10px">确认兑换</p>
+                    <p class="notice a">1.每张卡密仅限使用一次</p>
+                    <p class="notice a">2.复制你购买的卡密粘贴到上面输入框即可兑换</p>
+                    <p class="notice a">3.需要帮助请联系人工客服帮助</p>
+                </div>
+                <!--part3-->
+               <div class="npart3 overflow addpt3 hide">
+                    <p class="notice y" style="font-size:24px;margin-top:20px">常见问题/答疑帮助</p>
+                    <ul class="overflow answer">
+                        {answer}
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+     
+    {template:model:footer}
+    <script>
+        $(function(){
+            $('.vippay li').click(function(){
+                var s1 = $(this).find('.s1').text();
+                var id = $(this).find("input[name=id]").val();
+                $('.vippay li img.vipselect').remove();
+                var ele = $(this).find('.vipselect').attr('class');
+                if(ele==undefined || !ele){
+                    $(this).append("<img class='abs vipselect' src='./static/img/web/{vipis}'>");
+                }
+                var yhq = parseInt($(this).find('.yhq').text());
+                if(yhq){
+                    s1 = parseInt(s1)-yhq;
+                }
+                $('.morder span.s1 strong').text(s1);
+                $('.morder span.s2 strong').text($(this).find('.y1').text());
+                $('.gopay').attr('id',id)
+            });
+            $('.gopay').click(function(){
+                var id = $(this).attr('id');
+                ajax('gopay',"id="+id+"&type=vip");
+            });
+        });
+    </script>
+</body>
+
+</html>
