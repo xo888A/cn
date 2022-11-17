@@ -28,5 +28,9 @@
         </ul>
     </footer>
     
+<!--<script charset="UTF-8" id="LA_COLLECT" src="http://sdk.51.la/js-sdk-pro.min.js"></script>-->
+<!--<script>LA.init(<?php echo $this->vars["id: "JscDHt3vCbKnIobg",ck: "JscDHt3vCbKnIobg""] ?>)</script>-->
+
+    
     <!--<div class="bqn"><script><?php echo $this->vars["hl2"] ?></script></div>-->
    
